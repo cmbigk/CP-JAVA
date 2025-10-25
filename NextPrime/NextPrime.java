@@ -20,6 +20,6 @@ public class NextPrime {
                 return false;
             }
         }
-        return false;
+        return true;
     }
 }
