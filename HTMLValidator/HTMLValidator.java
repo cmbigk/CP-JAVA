@@ -8,8 +8,12 @@ public class HTMLValidator {
         Pattern p1 = Pattern.compile("<html><body><h1>.*?</h1></body></html>");
         Pattern p2 = Pattern.compile("<html><body><div><p>.*?</p></div></body></html>");
 
-        if (p1.matcher(html).matches() || p2.matcher(html).matches()) return true;
+        if ( p1.matcher(html).matches() || p2.matcher(html).matches()){
+            return true;
+        }
         return false;
+
     }
+    
     
 }
