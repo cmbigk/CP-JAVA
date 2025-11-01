@@ -2,13 +2,10 @@ import java.util.Arrays;
 public class AnagramChecker {
     public boolean isAnagram(String str1, String str2) {
 
-        if(str1.length()== 0&& str2.length()== 0) return true;
+        if (str1.length()== 0 && str2.length()== 0) return true;
 
         String cleanStr1 = str1.toLowerCase();
         String cleanStr2 = str2.toLowerCase();
-
-
-        if (cleanStr1.length()!= cleanStr2.length()) return false;
 
         char[] arr1 = cleanStr1.toCharArray();
         Arrays.sort(arr1);
@@ -16,6 +13,7 @@ public class AnagramChecker {
         Arrays.sort(arr2);
 
         return Arrays.equals(arr1,arr2);
+
     }
 
 }
