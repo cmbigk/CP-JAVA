@@ -59,7 +59,7 @@ public class SingleLinkedList implements LinkedList {
     }
 
     private Node next(Node node) {
-        System.out.println("Go to next node");
+        System.out.println("Go to next node\n");
         return node.next;
     }
 }
