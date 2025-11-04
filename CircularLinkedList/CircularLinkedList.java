@@ -57,9 +57,10 @@ public class CircularLinkedList implements LinkedList {
             head = head.next;
         }else if ( index == size - 1){
             Node beforeTail = gotoNodeIndex(size - 2);
+            Node tail = next(beforeTail);
+
         
             beforeTail.next = head;
-            tail = beforeTail;
             tail.next = head;
         }else{
             Node prev = gotoNodeIndex(index - 1);
