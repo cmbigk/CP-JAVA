@@ -1,32 +1,28 @@
- public class Task {
+public class Task {
     private String description;
     private TaskStatus status;
 
     public Task(String description){
         this.description = description;
-        this.status =TaskStatus.NEW;
+        this.status = TaskStatus.NEW;
+
     }
 
     public void setDescription(String description){
-    if(description.length() <=30){
-        this.description= description;
-    }else{
-        this.description = description.substring(0,30);
+        this.description = description;
     }
-}
-    
 
-     public void setStatus(TaskStatus status){
+    public void setStatus(TaskStatus status){
         this.status = status;
     }
 
     public String getDescription(){
-        return description;
+        return this.description;
     }
 
     public TaskStatus getStatus(){
-        return status;
+        return this.status;
     }
-} 
+   
     
-
+}
