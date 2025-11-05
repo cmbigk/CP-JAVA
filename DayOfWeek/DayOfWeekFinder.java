@@ -5,23 +5,23 @@ public class DayOfWeekFinder {
     public String findNextDayOfWeek(String startDate, String dayOfWeek) {
 
       try {
-        LocalDate startingDate = LocalDate.parse(startDate);
-        DayOfWeek targetDOW = DayOfWeek.valueOf(dayOfWeek.toUpperCase());
+          LocalDate currenDate = LocalDate.parse(startDate);
+          DayOfWeek targetDayOfWeek = DayOfWeek.valueOf(dayOfWeek.toUpperCase());
 
-        DayOfWeek startDay = startingDate.getDayOfWeek();
+          DayOfWeek currentDay = currenDate.getDayOfWeek();
 
-        int daysToAdd = (((targetDOW.getValue()-startDay.getValue())+7)%7);
+          int daysToAdd = (((targetDayOfWeek.getValue() - currentDay.getValue())+7)%7);
 
-        if (daysToAdd == 0){
-          daysToAdd = 7;
-        }
 
-         LocalDate resultDay = startingDate.plusDays(daysToAdd);
+          if (daysToAdd == 0){
+            daysToAdd = 7;
+          }
 
-         return resultDay.toString();
+          LocalDate resultDate = currenDate.plusDays(daysToAdd);
+
+          return resultDate.toString();
       } catch (Exception e) {
         return "Error";
       }
-
     }
 }
