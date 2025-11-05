@@ -8,10 +8,11 @@ public class TodoList {
         this.tasks = new Task[capacity];
         this.count = 0;
     }
+
     public void addTask(String description){
-        if (count<capacity){
+        if (count < capacity){
             tasks[count] = new Task(description);
-            count++;
+        count++;
         }
     }
 
@@ -22,8 +23,7 @@ public class TodoList {
     }
 
     public void setDescription(int index, String newDescription){
-    
-        if (index >= 0 && index <= count){
+         if (index >= 0 && index <= count){
             tasks[index].setDescription(newDescription);
         }
     }
@@ -31,7 +31,8 @@ public class TodoList {
     public void displayTasks(){
         System.out.println("Tasks:");
         for (int i = 0; i < count; i++) {
-        System.out.printf("%-33s |  %s\n" , tasks[i].getDescription() , tasks[i].getStatus());
+            System.out.printf("%-33s | %s\n", tasks[i].getDescription(),tasks[i].getStatus());
+         
         }
     }
 }
