@@ -6,7 +6,7 @@ public abstract class Sorter {
     }
 
     public void setArray(int[] array) {
-        this.array= array;
+        this.array = array;
     }
 
     public abstract void sort();
