@@ -12,14 +12,12 @@ public class DayOfWeekFinder {
 
           int daysToAdd = (((targetDayOfWeek.getValue() - currentDay.getValue())+7)%7);
 
-
-          if (daysToAdd == 0){
-            daysToAdd = 7;
+          if (daysToAdd == 0) {
+             daysToAdd = 7;
           }
 
-          LocalDate resultDate = currenDate.plusDays(daysToAdd);
-
-          return resultDate.toString();
+          LocalDate resultDay = currenDate.plusDays(daysToAdd);
+          return resultDay.toString();
       } catch (Exception e) {
         return "Error";
       }
