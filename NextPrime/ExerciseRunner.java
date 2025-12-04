@@ -7,6 +7,6 @@ public class ExerciseRunner {
         System.out.println(NextPrime.nextPrime(0)); // 2
         System.out.println(NextPrime.nextPrime(1)); // 2
         System.out.println(NextPrime.nextPrime(29)); // 31
-        System.out.println(NextPrime.nextPrime(-5)); // 2
+        System.out.println(NextPrime.nextPrime(-5)); // 0
     }
 }
