@@ -17,5 +17,8 @@ public class ExerciseRunner {
         // Test case 4: Valid HTML with multiple tags
         String html4 = "<html><body><div><p>This is a <b>bold</b> word and this is <i>italic</i>.</p></div></body></html>";
         System.out.println("Is HTML valid? " + validator.validateHTML(html4)); // Expected output: true
+
+         String html5 = "" ;
+        System.out.println("Is HTML valid? " + validator.validateHTML(html5));
     }
 }

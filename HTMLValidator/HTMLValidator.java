@@ -5,7 +5,7 @@ public class HTMLValidator {
         Pattern p1 = Pattern.compile("<html><body><div><p>.*?</p></div></body></html>");
         Pattern p2 = Pattern.compile("<html><body><h1>.*?</h1></body></html>");
 
-        if (html.isEmpty()) return true; // should be false with the correct testcase
+        if (html.isEmpty()) return false; // should be false with the correct testcase
 
         if(p1.matcher(html).matches() || p2.matcher(html).matches())return true;
 
