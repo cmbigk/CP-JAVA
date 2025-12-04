@@ -1,13 +1,13 @@
 
 
 public class AlmostPalindrome {
-    public static boolean isAlmostPalindrome(String s) {
+    public static boolean isAlmostPalindrome(String str) {
 
-        if (s.length()<3)return false;
-        if (isPalindrome(s)) return false;
+        if (str.length()<3)return false;
+        if (isPalindrome(str)) return false;
 
-        for (int i = 0; i < s.length();i++){
-            String modifString = s.substring(0,i)+s.substring(i+1);
+        for (int i = 0; i < str.length();i++){
+            String modifString = str.substring(0,i)+str.substring(i+1);
 
             if (isPalindrome(modifString)) return true;
         }
