@@ -5,11 +5,12 @@ import java.util.regex.Pattern;
 public class ConfigProtector {
     public String hideSensitiveData(String configFile, List<String> sensitiveKeys) {
 
-        String protectedConfString = configFile;
+        String protectedconfig = configFile;
 
-        for (String key : sensitiveKeys){
-            Pattern pattern = Pattern.compile("(?<=" + Pattern.quote(key)+ ").*");
-            Matcher matcher = pattern.matcher(protectedConfString);
+        for (String key: sensitiveKeys){
+
+            Pattern pattern = Pattern.compile("(?<="+ Pattern.quote(key)+").*");
+            Matcher matcher = pattern.matcher(protectedconfig);
 
             StringBuffer sb = new StringBuffer();
 
@@ -18,12 +19,10 @@ public class ConfigProtector {
                 String masked = "*".repeat(value.length());
 
                 matcher.appendReplacement(sb, masked);
-
             }
             matcher.appendTail(sb);
-            protectedConfString = sb.toString();
-
+            protectedconfig = sb.toString();
         }
-        return protectedConfString;
-    }
+        return protectedconfig;
+        }
 }
