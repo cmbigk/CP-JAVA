@@ -13,6 +13,7 @@ public class Regex {
         for (String component : components){
             pattern.append(component);
         }
+
        }
     }
 
@@ -21,6 +22,6 @@ public class Regex {
     }
 
     public void setPattern(){
-        this.pattern = new StringBuilder(pattern);
+        this.pattern = new StringBuilder();
     }
 }

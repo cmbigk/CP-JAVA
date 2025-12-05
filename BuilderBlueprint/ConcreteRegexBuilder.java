@@ -5,6 +5,8 @@ public class ConcreteRegexBuilder implements RegexBuilder {
     public ConcreteRegexBuilder(){
         component = new ArrayList();
     }
+
+
     @Override
     public void buildLiteral(String literal){
         component.add(literal);
@@ -25,9 +27,8 @@ public class ConcreteRegexBuilder implements RegexBuilder {
     public void buildWordCharacter(){
         component.add("\\w");
     }
-
     @Override
     public Regex getResult() {
-       return new Regex(component);
+        return new Regex(component);
     }
 }
