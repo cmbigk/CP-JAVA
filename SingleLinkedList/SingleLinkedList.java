@@ -12,26 +12,20 @@ public class SingleLinkedList implements LinkedList {
         }
     }
 
-    public Node gotoNodeIndex(int index){
-        Node current;
-        int step = index;
-        if (index == 0){
-            current = head;
-        }else {
-            current = head;
-            for (int i = 0; i < step; i++){
-                current= next(current);
-            }
+    public Node goToIndex(int index){
+        Node current = head;
+        for ( int i = 0; i < index; i++){
+            current = next(current);
         }
         return current;
     }
 
     @Override
     public int at(int index) {
-       if (index < 0 || index >= size) return -1;
+        if (index < 0 || index >= size) return -1;
 
-       Node current = gotoNodeIndex(index);
-       return current.value;
+        Node current = goToIndex(index);
+        return current.value;
     }
 
     @Override
@@ -41,8 +35,8 @@ public class SingleLinkedList implements LinkedList {
         if (head == null){
             head = newNode;
         }else{
-            Node tail = gotoNodeIndex(size - 1);
-            tail.next= newNode;
+            Node tail = goToIndex(size - 1);
+            tail.next = newNode;
             tail = newNode;
         }
         size++;
@@ -50,11 +44,12 @@ public class SingleLinkedList implements LinkedList {
 
     @Override
     public void remove(int index) {
-           if (index < 0 || index >= size) return ;
+        if (index < 0 || head == null || index >= size) return;
+
         if (index == 0){
-            head = head.next;
+            head= head.next;
         }else{
-            Node prev = gotoNodeIndex(index - 1);
+            Node prev = goToIndex(index - 1);
             Node current = next(prev);
 
             prev.next = current.next;
