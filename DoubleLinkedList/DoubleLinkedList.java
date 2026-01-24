@@ -27,9 +27,9 @@ public class DoubleLinkedList implements LinkedList {
 			}
 		}else{
 			current = tail;
-			step = (size - 1) - index;
+			
 
-			for ( int i = 0; i < step; i++){
+			for (int i = size - 1; i > step; i--){
 				current = prev(current);
 			}
 		}
