@@ -8,7 +8,7 @@ public class DoubleLinkedList implements LinkedList {
         Node next;
         Node prev;
         
-        public Node(int value){
+         Node(int value){
             this.value = value;
         }
     }
